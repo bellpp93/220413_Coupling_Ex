@@ -22,5 +22,4 @@ public class LgTV implements TV {
 	public void powerDown() {
 		System.out.println("LgTV ===> 전원을 끈다.");		
 	}
-
 }

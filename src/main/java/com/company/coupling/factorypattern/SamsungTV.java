@@ -4,6 +4,7 @@ package com.company.coupling.factorypattern;
  * 해당 클래스를 '구현 클래스'라 한다.
  */
 public class SamsungTV implements TV {
+	
 	// 메소드 시그니처가 동일
 
 	@Override  // => 어노테이션

@@ -3,7 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!-- <bean id="tv" class="com.company.coupling.polymorphism.SamsungTV"/> -->
+	<!--
 	<bean id="tv" class="com.company.coupling.polymorphism.LgTV"/>
+	 -->
+	<bean id="tv" class="com.company.coupling.polymorphism.SamsungTV">
+		<constructor-arg ref="apple"></constructor-arg>
+		<constructor-arg value="2500000"></constructor-arg>
+	</bean>
+	
+	<!--
+	<bean id="sony" class="com.company.coupling.polymorphism.SonySpeaker"></bean>
+	-->
+	
+	<bean id="apple" class="com.company.coupling.polymorphism.AppleSpeaker"></bean>
 
 </beans>
