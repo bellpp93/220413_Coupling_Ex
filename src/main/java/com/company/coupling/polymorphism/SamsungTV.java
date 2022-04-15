@@ -18,13 +18,26 @@ public class SamsungTV implements TV {
 		System.out.println("===> SamsungTV(1) 객체 생성");
 	}
 	/*
+	 * setter 인젝션 예 => setter 인젝션이 동작하려면 기본 생성자도 반드시 필요하다.
+	 */
+	public void setSpeaker(Speaker speaker) {
+		System.out.println("===> setSpeaker() 메소드 호출");
+		this.speaker = speaker;
+	}
+
+	public void setPrice(int price) {
+		System.out.println("===> setPrice() 메소드 호출");
+		this.price = price;
+	}
+	
+	/*
 	 * [중요***] 생성자 인젝션이란?
-	 * 이전에는 개발자가 어떤 클래스의 객체가 필요하면 그 클래스의 생성자를 통해서 객체 생성 후
-	 * 그 클래스의 메소드를 호출했다.
+	 * 이전에는 개발자가 어떤 클래스의 객체가 필요하면
+	 * 그 클래스의 생성자를 통해서 객체 생성 후 그 클래스의 메소드를 호출했다.
 	 * 그러나 스프링 프레임워크는 스프링 환경 설정 파일인 applicationContext.xml에
 	 * 객체를 <bean>에 등록 시켜 놓으면 스프링 컨테이너가 자동으로 객체를 생성하여 다른 클래스에서
 	 * 어떤 클래스의 객체가 필요하면 생성자 인젝션을 통해서 주입(Injection) 시킨다.
-	 */
+	 
 	public SamsungTV(Speaker speaker) {
 		System.out.println("===> SamsungTV(2) 객체 생성");
 		this.speaker = speaker;
@@ -34,7 +47,7 @@ public class SamsungTV implements TV {
 		this.speaker = speaker;
 		this.price = price;
 	}
-
+	*/
 	// 메소드 시그니처가 동일
 
 	@Override  // => 어노테이션

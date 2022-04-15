@@ -7,10 +7,15 @@
 	<bean id="tv" class="com.company.coupling.polymorphism.LgTV"/>
 	 -->
 	<bean id="tv" class="com.company.coupling.polymorphism.SamsungTV">
+		<!-- setter 인젝션 -->
+		<property name="speaker" ref="apple"></property>
+		<property name="price" value="2500000"></property>
+	
+		<!-- 생성자 인젝션 
 		<constructor-arg ref="apple"></constructor-arg>
 		<constructor-arg value="2500000"></constructor-arg>
+		 -->
 	</bean>
-	
 	<!--
 	<bean id="sony" class="com.company.coupling.polymorphism.SonySpeaker"></bean>
 	-->
