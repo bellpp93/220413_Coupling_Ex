@@ -1,5 +1,8 @@
 package com.company.coupling.polymorphism;
 
+import org.springframework.stereotype.Component;
+
+@Component("apple")
 public class AppleSpeaker implements Speaker {
 	// 생성자
 	public AppleSpeaker() {

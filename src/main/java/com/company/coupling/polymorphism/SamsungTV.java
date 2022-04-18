@@ -1,5 +1,8 @@
 package com.company.coupling.polymorphism;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /*
  * 해당 클래스를 '구현 클래스'라 한다.
  * 이 프로그램의 두 가지 문제점
@@ -8,12 +11,14 @@ package com.company.coupling.polymorphism;
  * 		volumeUp(), volumeDown() 두 개의 메소드를 모두 수정해야 한다.
  * [결론] 위의 두 가지 문제점을 해결하는 방법은 => DI를 적용!
  */
+@Component("tv")  // Component 어노테이션
 public class SamsungTV implements TV {
 	// 추가 => 수정
+	@Autowired  // Autowired 어노테이션
 	private Speaker speaker;	// Speaker 객체 참조변수
 	private int price;			// 가격
 	
-	// 생성자
+	// 기본 생성자
 	public SamsungTV() {
 		System.out.println("===> SamsungTV(1) 객체 생성");
 	}
