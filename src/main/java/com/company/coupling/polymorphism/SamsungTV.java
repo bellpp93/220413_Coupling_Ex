@@ -1,6 +1,9 @@
 package com.company.coupling.polymorphism;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /*
@@ -14,8 +17,8 @@ import org.springframework.stereotype.Component;
 @Component("tv")  // Component 어노테이션
 public class SamsungTV implements TV {
 	// 추가 => 수정
-	@Autowired  // Autowired 어노테이션
-	private Speaker speaker;	// Speaker 객체 참조변수
+	@Resource(name="apple")
+	private Speaker speaker;	// Speaker 객체 인스턴스 참조변수
 	private int price;			// 가격
 	
 	// 기본 생성자
